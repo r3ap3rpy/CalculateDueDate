@@ -14,7 +14,7 @@ def test_outofworkingdays():
         CalculateDueDate(datetime(2021, 12, 4, 19, 10, 55),14)
 
 def test_duedate():
-    assert CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),16) == datetime(2021, 12, 7, 13, 10, 56)
+    assert CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),16) == datetime(2021, 12, 7, 13, 10, 55)
 
 def test_invalidturnaroundtime():
     with pytest.raises(ValueError) as exc:

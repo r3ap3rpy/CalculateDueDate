@@ -14,7 +14,7 @@ Example usage:
 ``` python
 from CalculateDueDate import *
 >>> CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),16)
-datetime.datetime(2021, 12, 7, 13, 10, 56)
+datetime.datetime(2021, 12, 7, 13, 10, 55)
 ```
 
 

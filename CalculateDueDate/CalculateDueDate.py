@@ -17,7 +17,7 @@ def CalculateDueDate(SubmitDate: datetime, TurnaroundTime: int) -> datetime:
         raise ValueError("The turnaround time cannotbe negative!")
 
     TurnaroundSeconds = TurnaroundTime * 3600
-    while TurnaroundSeconds >= 0:
+    while TurnaroundSeconds > 0:
         if SubmitDate.isoweekday() in [6,7]:
             SubmitDate += timedelta(days=1)
         if SubmitDate.hour == 17:
