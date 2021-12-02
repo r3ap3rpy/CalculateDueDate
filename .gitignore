@@ -1,3 +1,6 @@
 .pytest_cache/
 tests/__pycache__/
 CalculateDueDate/__pycache__/
+build/
+CalculateDueDate.egg-info/
+dist/

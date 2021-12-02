@@ -1,3 +1,4 @@
+from CalculateDueDate import CalculateDueDateExceptions
 import pytest
 from datetime import datetime
 from CalculateDueDate.CalculateDueDate import CalculateDueDate
@@ -14,3 +15,11 @@ def test_outofworkingdays():
 
 def test_duedate():
     assert CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),16) == datetime(2021, 12, 7, 13, 10, 56)
+
+def test_invalidturnaroundtime():
+    with pytest.raises(ValueError) as exc:
+        CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),'asd')
+
+def test_negativeturnaroundtime():
+    with pytest.raises(ValueError) as exc:
+        CalculateDueDate(datetime(2021, 12, 3, 13, 10, 55),-1)
